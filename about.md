@@ -2,8 +2,6 @@
 title: About me
 ---
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.
+您好！我叫李亮，是一个程序猿。我专注于分布式开发，也对机器学习和芯片感兴趣。在这里，我会分享我学习的点滴，记录自己的工作和生活。如果你和我一样，喜欢分享，欢迎给我写信。谢谢！
 
-Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi.
-
-Find me on [GitHub](https://github.com/muan) or [Twitter](https://twitter.com/muanchiou).
+Find me on [GitHub](https://github.com/brightlee-china).
