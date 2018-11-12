@@ -1,7 +1,7 @@
 ---
-title: About me
+title: 关于我
 ---
 
 您好！我叫李亮，是一个程序猿。我专注于分布式开发，也对机器学习和芯片感兴趣。在这里，我会分享我学习的点滴，记录自己的工作和生活。如果你和我一样，喜欢分享，欢迎给我写信。谢谢！
 
-Find me on [GitHub](https://github.com/brightlee-china).
+[GitHub](https://github.com/brightlee-china).
