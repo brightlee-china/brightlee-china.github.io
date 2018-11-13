@@ -32,7 +32,7 @@ html {
 body {
   font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
   color: #333;
-  background-image: url(https://gw.alicdn.com/tfs/TB1xzbUumBYBeNjy0FeXXbnmFXa-125-121.png);
+  background: #fafbfc;
   position: relative;
   min-height: 100%;
   padding-bottom: 190px; }
@@ -109,17 +109,21 @@ img {
   max-width: 100%; }
 
 header {
-  background: #222;
+  background: #fafafb;
   height: 52px;
-  color: #9d9d9d;
-  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
+  color: #0457b7;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px; }
   header a {
-    color: #9d9d9d;
+    color: #0457b7;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease; }
     header a:hover {
-      color: #fff; }
+      color: #0570EB;
+      transition: background-color 0.5s ease-out;
+      -o-transition: background-color 0.5s ease-out;
+      -moz-transition: background-color 0.5s ease-out;
+      -webkit-transition: background-color 0.5s ease-out; }
   header .wrapper {
     width: 1140px;
     margin: 0 auto;
@@ -148,13 +152,19 @@ header {
             padding: 0 10px;
             height: 52px; }
             header .wrapper nav ul li a:hover {
-              background-color: #000; }
+              color: #fafbfc;
+              background-color: #0457b7;
+              transition: background-color 0.5s ease-out;
+              -o-transition: background-color 0.5s ease-out;
+              -moz-transition: background-color 0.5s ease-out;
+              -webkit-transition: background-color 0.5s ease-out; }
             header .wrapper nav ul li a i {
               margin-right: 5px; }
           header .wrapper nav ul li > .active {
-            color: #fff;
-            background-color: #000;
-            box-shadow: 0 25px 25px -15px rgba(255, 255, 255, 0.93); }
+            color: #0457b7;
+            background-color: #fafbfc;
+            box-shadow: 0 0px 0px 0px rgba(255, 255, 255, 0.93);
+            text-decoration: underline; }
 
 @media screen and (max-width: 1200px) and (min-width: 770px) {
   header {
@@ -171,7 +181,7 @@ header {
         display: none; }
       header .wrapper nav ul li a {
         padding: 0 8px;
-        height: 50px; }
+        height: 0px; }
         header .wrapper nav ul li a i {
           margin-right: 4px; } }
 @media screen and (max-width: 770px) {
@@ -256,7 +266,7 @@ header {
       padding-right: 5px;
       color: #6b6a6a; }
 .page[post] a {
-  color: #4d6dad;
+  color: #404040;
   transition: 0.5s ease; }
   .page[post] a:hover {
     color: #223253;
@@ -299,8 +309,8 @@ header {
     padding: 20px 30px;
     line-height: 1.6;
     font-size: 16px;
-    background-color: #f8f8fd;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 30px rgba(10, 10, 0, 0.1) inset; }
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset; }
     .page .left > h1 {
       margin-bottom: -10px; }
     .page .left a:not([title]) {
@@ -316,7 +326,7 @@ header {
         width: 135px; }
       .page .left ul li .title {
         font-weight: bold;
-        color: #223253;
+        color: #404040;
         transition: 0.3s ease; }
         .page .left ul li .title:hover {
           color: #4d6dad; }
@@ -325,7 +335,7 @@ header {
       .page .left ul li .categories {
         padding: 0 15px; }
         .page .left ul li .categories i {
-          color: #9e9d9d; }
+          color: #404040; }
         .page .left ul li .categories a {
           padding: 0 5px;
           background-color: #9e9d9d;
@@ -335,7 +345,7 @@ header {
           .page .left ul li .categories a:hover {
             background-color: #b6b6b9; }
       .page .left ul li .pageTag i {
-        color: #c6cbe9; }
+        color: #404040; }
       .page .left ul li .pageTag a {
         padding: 0 5px;
         background-color: #c6cbe9;
@@ -360,8 +370,8 @@ header {
       bottom: 190px; }
     .page .right .side {
       box-sizing: border-box;
-      background-color: #f8f8fd;
-      box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+      background-color: #fff;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset;
       padding-bottom: 1px;
       -ms-word-break: break-all;
       word-break: break-all;
@@ -376,7 +386,7 @@ header {
         font-size: 16px;
         font-weight: bold; }
       .page .right .side a {
-        color: #4d6dad;
+        color: #404040;
         transition: 0.5s ease; }
         .page .right .side a:hover {
           color: #223253; }
@@ -428,9 +438,9 @@ header {
       padding: 5px 10px;
       color: #333;
       font-size: 15px;
-      background-color: #f8f8fd;
-      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;
+      background-color: #fff;
       opacity: 0.7;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset;
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); }
     .page .anchor-hide {
       opacity: 0;
@@ -679,10 +689,11 @@ pre {
     color: #a6e22e; }
 
 .page[index] a {
-  color: #4d6dad;
+  color: #404040;
   transition: 0.5s ease; }
   .page[index] a:hover {
-    color: #223253; }
+    color: #000;
+    text-decoration: underline; }
 .page[index] .left > ul {
   padding: 0; }
   .page[index] .left > ul > li {
@@ -715,7 +726,7 @@ pre {
       text-align: right;
       font-size: 14px; }
       .page[index] .left > ul li .read-all a {
-        color: #778ab0;
+        color: #404040;
         transition: 0.2s ease; }
         .page[index] .left > ul li .read-all a:hover {
           color: #5872a7; }
@@ -850,9 +861,9 @@ pre {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: #2b2b3c;
-  box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.5);
-  color: #bbb; }
+  background-color: #fafbfc;
+  box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.2);
+  color: #808080; }
   .site-footer .wrapper {
     width: 1140px;
     margin: 0 auto;

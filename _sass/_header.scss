@@ -1,15 +1,19 @@
 header {
-    background: #222;
+    background: #fafafb;
     height: 52px;
-    color: #9d9d9d;
-    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.5);
+    color: rgb(4, 87, 183);
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.2);
     margin-bottom: 20px;
     a {
-        color: #9d9d9d;
+        color: rgb(4, 87, 183);
         -webkit-transition: 0.2s ease;
         transition: 0.2s ease;
         &:hover {
-            color: #fff;
+			color: #0570EB;
+			transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
         }
     }
     .wrapper {
@@ -43,16 +47,22 @@ header {
                         padding: 0 10px;
                         height: 52px;
                         &:hover {
-                            background-color: #000;
+							color: #fafbfc;
+                            background-color: rgb(4, 87, 183);
+							transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
                         }
                         i {
                             margin-right: 5px;
                         }
                     }
                     >.active {
-                        color: #fff;
-                        background-color: #000;
-                        box-shadow: 0 25px 25px -15px rgba(255,255,255,0.93);
+                        color: rgb(4, 87, 183);
+                        background-color: #fafbfc;
+                        box-shadow: 0 0px 0px 0px rgba(255,255,255,0.93);
+						text-decoration:underline;
                     }
                 }
             }
@@ -80,7 +90,7 @@ header {
                     li {
                         a {
                             padding: 0 8px;
-                            height: 50px;
+                            height: 0px;
                             i {
                                 margin-right: 4px;
                             }
