@@ -1,8 +1,8 @@
 header {
-    background: #fafafb;
+    background: #fafbfc;
     height: 52px;
     color: rgb(4, 87, 183);
-    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.2);
+
     margin-bottom: 20px;
     a {
         color: rgb(4, 87, 183);
@@ -21,11 +21,12 @@ header {
         margin: 0 auto;
         line-height: 52px;
         .brand {
-            font-size: 18px;
+            font-size: 22px;
         }
         small {
             margin-left: 26px;
-            font-size: 14px;
+            font-size: 15px;
+			color: #404040;
         }
         .menu{
             display: none;
@@ -38,7 +39,7 @@ header {
                 padding: 0;
                 li {
                     list-style: none;
-                    font-size: 14px;
+                    font-size: 15px;
                     display: inline-block;
                     -webkit-transition: 0.2s ease;
                     transition: 0.2s ease;

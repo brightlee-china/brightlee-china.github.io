@@ -109,10 +109,9 @@ img {
   max-width: 100%; }
 
 header {
-  background: #fafafb;
+  background: #fafbfc;
   height: 52px;
   color: #0457b7;
-  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px; }
   header a {
     color: #0457b7;
@@ -129,10 +128,11 @@ header {
     margin: 0 auto;
     line-height: 52px; }
     header .wrapper .brand {
-      font-size: 18px; }
+      font-size: 22px; }
     header .wrapper small {
       margin-left: 26px;
-      font-size: 14px; }
+      font-size: 15px;
+      color: #404040; }
     header .wrapper .menu {
       display: none; }
     header .wrapper nav {
@@ -143,7 +143,7 @@ header {
         padding: 0; }
         header .wrapper nav ul li {
           list-style: none;
-          font-size: 14px;
+          font-size: 15px;
           display: inline-block;
           -webkit-transition: 0.2s ease;
           transition: 0.2s ease; }
@@ -266,7 +266,7 @@ header {
       padding-right: 5px;
       color: #6b6a6a; }
 .page[post] a {
-  color: #404040;
+  color: #0457b7;
   transition: 0.5s ease; }
   .page[post] a:hover {
     color: #223253;
@@ -310,7 +310,7 @@ header {
     line-height: 1.6;
     font-size: 16px;
     background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset; }
+    border: 0.05em solid #0457b7; }
     .page .left > h1 {
       margin-bottom: -10px; }
     .page .left a:not([title]) {
@@ -326,10 +326,10 @@ header {
         width: 135px; }
       .page .left ul li .title {
         font-weight: bold;
-        color: #404040;
+        color: #0457b7;
         transition: 0.3s ease; }
         .page .left ul li .title:hover {
-          color: #4d6dad; }
+          color: #0570EB; }
       .page .left ul li i {
         margin-right: 5px; }
       .page .left ul li .categories {
@@ -337,13 +337,13 @@ header {
         .page .left ul li .categories i {
           color: #404040; }
         .page .left ul li .categories a {
+          color: #0457b7;
+          transition: 0.5s ease;
           padding: 0 5px;
-          background-color: #9e9d9d;
-          color: #fff;
-          font-size: 90%;
-          transition: 0.3s ease; }
+          font-size: 90%; }
           .page .left ul li .categories a:hover {
-            background-color: #b6b6b9; }
+            color: #223253;
+            background-color: #f4efeb; }
       .page .left ul li .pageTag i {
         color: #404040; }
       .page .left ul li .pageTag a {
@@ -371,7 +371,7 @@ header {
     .page .right .side {
       box-sizing: border-box;
       background-color: #fff;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+      border: 0.05em solid #0457b7;
       padding-bottom: 1px;
       -ms-word-break: break-all;
       word-break: break-all;
@@ -386,10 +386,10 @@ header {
         font-size: 16px;
         font-weight: bold; }
       .page .right .side a {
-        color: #404040;
+        color: #0457b7;
         transition: 0.5s ease; }
         .page .right .side a:hover {
-          color: #223253; }
+          color: #0570EB; }
     .page .right .content-ul {
       overflow-y: auto;
       padding-right: 10px;
@@ -440,7 +440,7 @@ header {
       font-size: 15px;
       background-color: #fff;
       opacity: 0.7;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(10, 10, 0, 0.1) inset;
+      border: 0.05em solid #0457b7;
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); }
     .page .anchor-hide {
       opacity: 0;
@@ -689,10 +689,10 @@ pre {
     color: #a6e22e; }
 
 .page[index] a {
-  color: #404040;
+  color: #0457b7;
   transition: 0.5s ease; }
   .page[index] a:hover {
-    color: #000;
+    color: #0570EB;
     text-decoration: underline; }
 .page[index] .left > ul {
   padding: 0; }
@@ -862,7 +862,6 @@ pre {
   left: 0;
   text-align: center;
   background-color: #fafbfc;
-  box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.2);
   color: #808080; }
   .site-footer .wrapper {
     width: 1140px;
