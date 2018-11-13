@@ -23,7 +23,7 @@ urls:
     - text: About Me
       url: /about/
     - text: Category
-      url: /category/jekyll
+      url: /category/生活记事
 
 url: "https://brightlee-china.github.io"
 baseurl: ""
