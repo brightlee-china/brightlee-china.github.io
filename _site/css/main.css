@@ -726,10 +726,10 @@ pre {
       text-align: right;
       font-size: 14px; }
       .page[index] .left > ul li .read-all a {
-        color: #404040;
+        color: #0457b7;
         transition: 0.2s ease; }
         .page[index] .left > ul li .read-all a:hover {
-          color: #5872a7; }
+          color: #0570EB; }
         .page[index] .left > ul li .read-all a i {
           padding-right: 3px; }
 .page[index] .left .pagination {
@@ -741,7 +741,7 @@ pre {
   .page[index] .left .pagination .page_number {
     padding: 0 5px; }
   .page[index] .left .pagination .disable {
-    color: #cbcbcb; }
+    color: #0457b7; }
 .page[index] .right .wrap .side {
   margin-bottom: 20px;
   padding-bottom: 0; }
