@@ -32,7 +32,7 @@ html {
 body {
   font-family: tahoma,'PingFang SC','microsoft yahei',arial,'helvetica neue','hiragino sans gb',sans-serif;
   color: #333;
-  background: #fafbfc;
+  background: #f9f9f9;
   position: relative;
   min-height: 100%;
   padding-bottom: 190px; }
@@ -109,7 +109,7 @@ img {
   max-width: 100%; }
 
 header {
-  background: #fafbfc;
+  background: #f9f9f9;
   height: 52px;
   color: #0457b7;
   margin-bottom: 20px; }
@@ -162,7 +162,7 @@ header {
               margin-right: 5px; }
           header .wrapper nav ul li > .active {
             color: #0457b7;
-            background-color: #fafbfc;
+            background-color: #f9f9f9;
             box-shadow: 0 0px 0px 0px rgba(255, 255, 255, 0.93);
             text-decoration: underline; }
 
@@ -309,8 +309,7 @@ header {
     padding: 20px 30px;
     line-height: 1.6;
     font-size: 16px;
-    background-color: #fff;
-    border: 0.05em solid #0457b7; }
+    background-color: #fff; }
     .page .left > h1 {
       margin-bottom: -10px; }
     .page .left a:not([title]) {
@@ -371,7 +370,8 @@ header {
     .page .right .side {
       box-sizing: border-box;
       background-color: #fff;
-      border: 0.05em solid #0457b7;
+      border: 0.05em dotted #0457b7;
+      border-radius: 3px;
       padding-bottom: 1px;
       -ms-word-break: break-all;
       word-break: break-all;
@@ -440,7 +440,8 @@ header {
       font-size: 15px;
       background-color: #fff;
       opacity: 0.7;
-      border: 0.05em solid #0457b7;
+      border: 0.05em dotted #0457b7;
+      border-radius: 3px;
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); }
     .page .anchor-hide {
       opacity: 0;
