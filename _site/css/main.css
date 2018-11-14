@@ -32,7 +32,7 @@ html {
 body {
   font-family: tahoma,'PingFang SC','microsoft yahei',arial,'helvetica neue','hiragino sans gb',sans-serif;
   color: #333;
-  background: #f9f9f9;
+  background: #eeeeee;
   position: relative;
   min-height: 100%;
   padding-bottom: 190px; }
@@ -109,7 +109,7 @@ img {
   max-width: 100%; }
 
 header {
-  background: #f9f9f9;
+  background: #eeeeee;
   height: 52px;
   color: #0457b7;
   margin-bottom: 20px; }
@@ -162,7 +162,7 @@ header {
               margin-right: 5px; }
           header .wrapper nav ul li > .active {
             color: #0457b7;
-            background-color: #f9f9f9;
+            background-color: #eeeeee;
             box-shadow: 0 0px 0px 0px rgba(255, 255, 255, 0.93);
             text-decoration: underline; }
 
@@ -309,7 +309,8 @@ header {
     padding: 20px 30px;
     line-height: 1.6;
     font-size: 16px;
-    background-color: #fff; }
+    background-color: #fff;
+    border-radius: 3px; }
     .page .left > h1 {
       margin-bottom: -10px; }
     .page .left a:not([title]) {
@@ -862,7 +863,7 @@ pre {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: #fafbfc;
+  background-color: #eeeeee;
   color: #808080; }
   .site-footer .wrapper {
     width: 1140px;

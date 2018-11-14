@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Brightlee`s blog
+title: 空山灵雨
 brief-intro: 「Stay hungry. Stay foolish.」
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://brightlee-china.github.io" # the base hostname & protocol for your site
@@ -20,7 +20,7 @@ weibo_username: 2538815982
 linkedIn_username: 亮-李-64714b16b
 dribbble_username:
 
-description_footer: 「Stay hungry. Stay foolish.」
+description_footer: <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a>
 
 # comments
 # two ways to comment, only choose one, and use your own short name
