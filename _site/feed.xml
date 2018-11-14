@@ -5,21 +5,21 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Nov 2018 09:59:10 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Nov 2018 09:59:10 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Nov 2018 15:04:41 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Nov 2018 15:04:41 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>标题</title>
-        <description>这是一个测试
+        <title>Linear Algebra #1</title>
+        <description>MIT`s Linear Algebra课程的笔记
 
 </description>
-        <pubDate>Wed, 10 Oct 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2018/10/10/test/</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/10/10/test/</guid>
+        <pubDate>Wed, 14 Nov 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/11/14/linear-alg/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/11/14/linear-alg/</guid>
         
         
-        <category>日记</category>
+        <category>linear_algebra</category>
         
       </item>
     
