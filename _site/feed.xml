@@ -5,9 +5,24 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Nov 2018 15:04:41 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Nov 2018 15:04:41 +0800</lastBuildDate>
+    <pubDate>Sat, 24 Nov 2018 21:25:28 +0800</pubDate>
+    <lastBuildDate>Sat, 24 Nov 2018 21:25:28 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>ISCA2018论文分享-RANA神经加速器</title>
+        <description>
+</description>
+        <pubDate>Sat, 24 Nov 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/11/24/ISCA2018%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB-RANA%E7%A5%9E%E7%BB%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/11/24/ISCA2018%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB-RANA%E7%A5%9E%E7%BB%8F%E5%8A%A0%E9%80%9F%E5%99%A8/</guid>
+        
+        
+        <category>存储</category>
+        
+        <category>AI加速器</category>
+        
+      </item>
     
       <item>
         <title>Linear Algebra #1</title>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ISCA2018论文分享-RANA神经加速器</title>
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2018/11/24/ISCA2018%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB-RANA%E7%A5%9E%E7%BB%8F%E5%8A%A0%E9%80%9F%E5%99%A8/">
+    <link rel="alternate" type="application/rss+xml" title="空山灵雨" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?55e2264e826c43a179f973f2c9511ab7";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script>
+    // google analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-129111180-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">空山灵雨</a>
+        <small>「Stay hungry. Stay foolish.」</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>ISCA2018论文分享-RANA神经加速器</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2018-11-24
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#存储" title="Category: 存储" rel="category">存储</a>&nbsp;
+    
+        <a href="/category/#AI加速器" title="Category: AI加速器" rel="category">AI加速器</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#rana-towards-efficient-neural-acceleration-with-refresh-optimized-embedded-dram" id="markdown-toc-rana-towards-efficient-neural-acceleration-with-refresh-optimized-embedded-dram">RANA: Towards Efficient Neural Acceleration with Refresh-Optimized Embedded DRAM</a>    <ul>
+      <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+      <li><a href="#论文方法" id="markdown-toc-论文方法">论文方法</a>        <ul>
+          <li><a href="#1-训练层次的优化数据生存时间感知的训练方法" id="markdown-toc-1-训练层次的优化数据生存时间感知的训练方法">1. 训练层次的优化：数据生存时间感知的训练方法</a></li>
+          <li><a href="#2-调度层次优化神经网络分层的混合计算模式" id="markdown-toc-2-调度层次优化神经网络分层的混合计算模式">2. 调度层次优化：神经网络分层的混合计算模式</a></li>
+          <li><a href="#3-架构层次优化刷新优化的-edram-控制器" id="markdown-toc-3-架构层次优化刷新优化的-edram-控制器">3. 架构层次优化：刷新优化的 eDRAM 控制器</a></li>
+        </ul>
+      </li>
+      <li><a href="#实验结果" id="markdown-toc-实验结果">实验结果</a></li>
+      <li><a href="#感想" id="markdown-toc-感想">感想</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="rana-towards-efficient-neural-acceleration-with-refresh-optimized-embedded-dram">RANA: Towards Efficient Neural Acceleration with Refresh-Optimized Embedded DRAM</h1>
+
+<blockquote>
+  <ul>
+    <li><strong>Conferences:</strong> ISCA, 2018</li>
+    <li><strong>Authors:</strong> Fengbin Tu ; Weiwei Wu ; Shouyi Yin ; Leibo Liu ; Shaojun Wei</li>
+    <li><strong>Site:</strong> https://ieeexplore.ieee.org/document/8416839</li>
+    <li><strong>Keywords:</strong> Neural Network; Embedded DRAM (eDRAM); Refresh Optimization; Retention Time</li>
+  </ul>
+</blockquote>
+
+<h2 id="abstract">Abstract</h2>
+<p>The growing size of convolutional neural networks (CNNs) requires large amounts of on-chip storage. In many CNN accelerators, their limited on-chip memory capacity causes massive off-chip memory access and leads to very high system energy consumption. Embedded DRAM (eDRAM), with higher density than SRAM, can be used to improve on-chip buffer capacity and reduce off-chip access. However, eDRAM requires periodic refresh to maintain data retention, which costs much energy consumption.</p>
+
+<p>Refresh is unnecessary if the data’s lifetime in eDRAM is shorter than the eDRAM’s retention time. Based on this principle, we propose a Retention-Aware Neural Acceleration (RANA) framework for CNN accelerators to save total system energy consumption with refresh-optimized eDRAM. The RANA framework includes three levels of techniques: a retention-aware training method, a hybrid computation pattern and a refresh-optimized eDRAM controller. At the training level, CNN’s error resilience is exploited in training to improve eDRAM’s tolerable retention time. At the scheduling level, RANA assigns each CNN layer with a computation pattern that consumes the lowest energy. At the architecture level, a refresh-optimized eDRAM controller is proposed to alleviate unnecessary refresh operations. We implement an evaluation platform to verify RANA. Owing to the RANA framework, 99.7% eDRAM refresh operations can be removed with negligible performance and accuracy loss. Compared with the conventional SRAM-based CNN accelerator, an eDRAM-based CNN accelerator strengthened by RANA can save 41.7% off-chip memory access and 66.2% system energy consumption, with the same area cost.</p>
+
+<h2 id="论文方法">论文方法</h2>
+<p><strong>目前大多数CNN加速器存在以下几个问题：</strong></p>
+
+<ul>
+  <li>深度神经网络的规模日益增大，芯片存储容量不够，导致频繁的片外访问而带来性能的损失和功耗的增加</li>
+  <li>采用SRAM来实现缓存无需刷新，但相比于eDRAM而言密度低，导致无法在面积固定下有更大的容量。</li>
+  <li>eDRAM密度高，但需要频繁刷新，且刷新的保留期是最坏的保留期，占很大一部分的系统能耗。</li>
+</ul>
+
+<p>本论文使用eDRAM作为存储方案，并就刷新次数进行优化。在不影响模型准确度的情况下，极大的降低了加速器的功耗，提出了RANA的神经加速器框架。</p>
+
+<p>本文的<strong>核心思想</strong>是：如果数据在eDRAM的生存时间（Data Lifetime）小于eDRAM的数据维持时间（Retention Time），那么系统将不需要对此数据进行刷新。由此得到两个优化方向：<strong>++降低数据生存时间++</strong>，<strong>++增加eDRAM的数据维持时间++</strong>。更重要的是，论文还发现，在允许一定的数据错误率下并不会影响CNN神经网络模型的准确率。</p>
+
+<p>RANA神经加速器的总体结构和流程如下：</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454684?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<p>如图所示，RANA框架采用三个层次的技术来优化能耗。</p>
+<ol>
+  <li>数据生存时间感知的训练方法</li>
+  <li>神经网络分层的混合计算模式</li>
+  <li>刷新优化的控制器</li>
+</ol>
+
+<h3 id="1-训练层次的优化数据生存时间感知的训练方法">1. 训练层次的优化：数据生存时间感知的训练方法</h3>
+
+<p>通常eDRAM的刷新周期会设置为最差存储单元对应的数据维持时间，以保证数据存储不会出错。而实际eDRAM存储器各个存储单元的数据维持时间是不同的。分析典型 eDRAM 数据维持时间分布曲线，如下图所示：</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454717?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<p>对于一个32KB的eDRAM而言，数据维持时间最短是45us，对应的错误率是10^(-6)。而通过分析图，发现即使增加数据维持时间，错误率也不会显著提升。重要的是，我们可以利用DNN对数据的容错能力来重新训练网络使其能承受更高的错误率，以获得更长的（可容忍）数据维持时间。</p>
+
+<p>为了验证这个想法的正确性，文章在神经网络的训练中插入了一个比特级的错误掩码（根据错误率每次进行随机）。经过反复的训练，发现最终的精度损失随错误率的提升而呈现出如下曲线：</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454794?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<p>上图说明，错误率提高到 10^(-5) 后网络精度仍没有损失，而此时对应的「可容忍」的数据维持时间提高到了 734 us。因此，更有可能减少刷新次数。</p>
+
+<h3 id="2-调度层次优化神经网络分层的混合计算模式">2. 调度层次优化：神经网络分层的混合计算模式</h3>
+
+<p>为了实现CNN卷积计算过程，eDRAM存储分为三个部分，input buffer、weight buffer、out buffer。</p>
+
+<p>而一个典型的CNN计算过程如下图：</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454817?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<p>由于存储空间有限，一般将卷积的过程通过不断迭代来实现。如图虚线部分是一次eDRAM中的计算过程。<strong>文章发现：数据维持时间和存储空间与外层循环计算的顺序有关。</strong></p>
+
+<p>而随着神经网络不断的迭代计算，Bi(input buffer)、Bw(weight buffer)、Bo(out buffer)在不断变化，而这三者之间的大小关系影响着数据维持时间。如下图所示：</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454842?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<p>因此，根据芯片参数及 DNN 网络参数，可以对网络的每一层分配一个最优的计算模式。计算模式的探索过程被抽象为一个目标为系统能耗最小化的优化问题。具体调度方法如下图所示，调度结果会被编译成分层的配置信息（包括「可容忍」的数据维持时间、每层的计算模式及刷新标志），以用于执行过程的硬件配置。</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454850?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<h3 id="3-架构层次优化刷新优化的-edram-控制器">3. 架构层次优化：刷新优化的 eDRAM 控制器</h3>
+
+<p>在传统的 eDRAM 控制器中，所有的 eDRAM 分区都以最保守的刷新周期进行刷新。本工作对 eDRAM 控制器稍加改造，加入一个可编程的时钟分频器、各 eDRAM 分区独立的刷新触发器和刷新标志位。控制器的配置信息来自于前两个技术的编译结果，具体将决定每个分区分别存储什么数据类型、是否需要刷新以及刷新周期。</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454857?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<h2 id="实验结果">实验结果</h2>
+
+<p>实验结果显示，RANA 框架可以消除 99.7% 的 eDRAM 刷新能耗开销，而性能和精度损失可以忽略不计。相比于传统的采用 SRAM 的 AI 计算芯片，使用 RANA 框架的基于 eDRAM 的计算芯片在面积开销相同的情况下可以减少 41.7% 的片外访存和 66.2% 的系统能耗，使 AI 计算系统的能量效率获得大幅提高。</p>
+
+<p><img src="https://note.youdao.com/yws/api/group/89373453/file/428454862?method=getImage&amp;WLP=true&amp;width=1280&amp;height=10000000&amp;version=1&amp;cstk=gF91R0q6" alt="image" /></p>
+
+<h2 id="感想">感想</h2>
+
+<ul>
+  <li>文章从一个优化思路出发，根据CNN算法的过程，不断进行优化。分析的非常详细，并且有大量实验进行论证。</li>
+  <li>CNN算法允许一定的容错率，给eDRAM的设计带来了优化空间，是一个非常好的利用。</li>
+</ul>
+
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2018/11/14/linear-alg/">Linear Algebra #1</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+    </div>
+</div>
+
+
+        <h2 id="comments">Comments</h2>
+        
+
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+
+    var disqus_config = function() {
+        this.page.url = 'http://localhost:4000/2018/11/24/ISCA2018%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB-RANA%E7%A5%9E%E7%BB%8F%E5%8A%A0%E9%80%9F%E5%99%A8/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2018/11/24/ISCA2018%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB-RANA%E7%A5%9E%E7%BB%8F%E5%8A%A0%E9%80%9F%E5%99%A8/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement('script');
+
+        s.src = '//brightlee-com.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a> 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/brightlee-china" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:liliang@iscas.ac.cn" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="http://weibo.com/2538815982" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>      
+            <a href="https://www.linkedin.com/in/亮-李-64714b16b" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>  
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <div class="back-to-top">
+    <a href="#top" data-scroll>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/smooth-scroll.min.js " charset="utf-8"></script>
+    <script type="text/javascript">
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
+    </script>
+    <!-- <script src=" /js/scroll.min.js " charset="utf-8"></script> -->
+  </body>
+
+</html>
