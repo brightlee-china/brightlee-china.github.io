@@ -5,9 +5,22 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Nov 2018 21:25:28 +0800</pubDate>
-    <lastBuildDate>Sat, 24 Nov 2018 21:25:28 +0800</lastBuildDate>
+    <pubDate>Sat, 29 Dec 2018 20:50:20 +0800</pubDate>
+    <lastBuildDate>Sat, 29 Dec 2018 20:50:20 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>2018年终总结</title>
+        <description>
+</description>
+        <pubDate>Sat, 29 Dec 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/12/29/2018%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/12/29/2018%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</guid>
+        
+        
+        <category>记事</category>
+        
+      </item>
     
       <item>
         <title>ISCA2018论文分享-RANA神经加速器</title>
