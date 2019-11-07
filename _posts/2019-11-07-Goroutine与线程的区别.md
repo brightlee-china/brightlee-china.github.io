@@ -3,8 +3,7 @@ layout: post
 title: "Goroutines和线程的区别"
 categories: 编程语言
 ---
-
-- content
+* content
 {:toc}
 
 
